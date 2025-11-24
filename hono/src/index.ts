@@ -1,9 +1,19 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
+import connectDB from "./utils/connect";
+import videoRouter from "./routes/video.route";
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+connectDB()
+  .then(() => {
+    app.route("/video", videoRouter);
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
 
-export default app
+const port = process.env.PORT || 3000;
+export default {
+  fetch: app.fetch,
+  port: port,
+};
