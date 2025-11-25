@@ -12,9 +12,9 @@ We conducted a load test using **Autocannon** to measure the throughput and late
 
 | Metric | Express.js 🐢 | Hono 🚀 | Improvement |
 | :--- | :--- | :--- | :--- |
-| **Requests/sec** | ~13,000 | **~57,000** | **4.3x Faster** |
-| **Latency (Avg)** | 75 ms | **17 ms** | **4.4x Lower** |
-| **Throughput** | 2.8 MB/sec | **12.7 MB/sec** | **4.5x Higher** |
+| **Requests/sec** | 3,776 | **~30,995** | **8.2x Faster** |
+| **Latency (Avg)** | 2.13 ms | **0.04 ms** | **53.25x Lower** |
+| **Throughput** | 1.55 MB/sec | **4.25 MB/sec** | **2.7x Higher** |
 
 ### Visual Proof
 

